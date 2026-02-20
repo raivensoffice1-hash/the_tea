@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CHAI GALI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">☕ CHAI GALI</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch with us today!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="contactName" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" name="contactEmail" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number</label>
+                                <input type="tel" id="contactPhone" name="contactPhone" placeholder="+91-XXXX-XXXX-XXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Select a subject --</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="catering">Catering Request</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please enter your message here..." rows="6"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p id="submitMessage" class="form-note" style="display:none; color: green; margin-top: 10px;"></p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3>📍 Location</h3>
+                        <p>123 Tea Street, Chai Lane</p>
+                        <p>City, State - 123456</p>
+                        <p class="small-text">Located in downtown area, easy parking available</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:+919876543210">+91-98765-43210</a></p>
+                        <p class="small-text">Mon-Sun: 7:00 AM - 10:00 PM</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:info@chaigali.com">info@chaigali.com</a></p>
+                        <p><a href="mailto:orders@chaigali.com">orders@chaigali.com</a></p>
+                        <p class="small-text">We'll respond within 24 hours</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>🕐 Hours</h3>
+                        <p>Monday - Friday: 7:00 AM - 10:00 PM</p>
+                        <p>Saturday: 8:00 AM - 11:00 PM</p>
+                        <p>Sunday: 8:00 AM - 10:00 PM</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>🌐 Follow Us</h3>
+                        <p>
+                            <a href="#" class="social-link">Facebook</a> |
+                            <a href="#" class="social-link">Twitter</a> |
+                            <a href="#" class="social-link">Instagram</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Placeholder) -->
+    <section class="map-section">
+        <h2>Find Us Here</h2>
+        <div class="address-map">
+            <p style="padding: 40px; text-align: center; background: #f0f0f0; border-radius: 8px;">
+                📍 Google Map or location map can be embedded here<br>
+                <small>(Integrate with Google Maps or similar service for production)</small>
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>❓ What are your delivery hours?</h3>
+                    <p>We deliver from 7:00 AM to 10:00 PM every day. Orders are delivered within 15-20 minutes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ Do you accept online payments?</h3>
+                    <p>Yes! We accept cash on delivery, UPI, credit cards, and debit cards. Choose your preferred method at checkout.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ Can I customize my tea?</h3>
+                    <p>Absolutely! We offer various customization options. Just mention your preferences in the special instructions.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ Do you offer catering for events?</h3>
+                    <p>Yes! We provide catering services for parties and events. Contact us for bulk orders and special arrangements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ Are your teas organic?</h3>
+                    <p>While not all our teas are certified organic, we source premium quality leaves from trusted gardens.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ What if I'm not satisfied with my order?</h3>
+                    <p>Your satisfaction is our priority. We offer a 100% satisfaction guarantee and will remake your order if needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Visit Us or Order Now</h2>
+        <p>Stop by our cozy outlet or order your favorite tea online</p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="order.html" class="btn btn-light">Order Online</a>
+            <a href="#" class="btn btn-secondary" onclick="alert('Coming Soon: Live chat support!'); return false;">Chat with Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CHAI GALI</h4>
+                <p>Your favorite tea stop for premium quality and great taste</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Tea Street, Chai Lane</p>
+                <p>📞 +91-XXXX-XXXX-XXXX</p>
+                <p>📧 info@chaigali.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">i</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CHAI GALI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

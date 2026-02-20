@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - CHAI GALI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">☕ CHAI GALI</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="order.html" class="nav-link active">Order</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Order Your Tea</h1>
+        <p>Fresh, premium tea delivered quickly to you</p>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section">
+        <div class="container">
+            <div class="order-wrapper">
+                <!-- Order Form -->
+                <div class="order-form">
+                    <h2>Place Your Order</h2>
+                    <form id="orderForm">
+                        <!-- Personal Details -->
+                        <fieldset class="form-group">
+                            <legend>Your Details</legend>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-field">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+91-XXXX-XXXX-XXXX">
+                                </div>
+                                <div class="form-field">
+                                    <label for="address">Delivery Address *</label>
+                                    <input type="text" id="address" name="address" required placeholder="Enter your address">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Tea Selection -->
+                        <fieldset class="form-group">
+                            <legend>Select Your Tea</legend>
+
+                            <div class="form-field">
+                                <label for="teaType">Tea Type *</label>
+                                <select id="teaType" name="teaType" required onchange="updatePrice()">
+                                    <option value="">-- Choose a tea --</option>
+                                    <optgroup label="Classic Teas">
+                                        <option value="masala_chai" data-price="20">Masala Chai - ₹20</option>
+                                        <option value="plain_tea" data-price="15">Plain Tea - ₹15</option>
+                                        <option value="milk_tea" data-price="30">Milk Tea - ₹30</option>
+                                        <option value="pudina_tea" data-price="25">Pudina Tea - ₹25</option>
+                                    </optgroup>
+                                    <optgroup label="Herbal Teas">
+                                        <option value="ginger_tea" data-price="30">Ginger Tea - ₹30</option>
+                                        <option value="tulsi_tea" data-price="25">Tulsi Tea - ₹25</option>
+                                        <option value="chamomile_tea" data-price="35">Chamomile Tea - ₹35</option>
+                                        <option value="lemon_honey" data-price="28">Lemon-Honey Tea - ₹28</option>
+                                    </optgroup>
+                                    <optgroup label="Special Blends">
+                                        <option value="cardamom_chai" data-price="25">Cardamom Chai - ₹25</option>
+                                        <option value="cinnamon_tea" data-price="30">Cinnamon Tea - ₹30</option>
+                                        <option value="iced_chai" data-price="40">Iced Chai - ₹40</option>
+                                        <option value="almond_chai" data-price="45">Almond Chai - ₹45</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="quantity">Quantity *</label>
+                                    <input type="number" id="quantity" name="quantity" required min="1" max="10" value="1" onchange="updatePrice()">
+                                </div>
+                                <div class="form-field">
+                                    <label for="temperature">Temperature</label>
+                                    <select id="temperature" name="temperature">
+                                        <option value="hot">Hot</option>
+                                        <option value="warm">Warm</option>
+                                        <option value="cold">Cold/Iced</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Add-ons -->
+                        <fieldset class="form-group">
+                            <legend>Add-ons</legend>
+
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="honey" data-price="5" onchange="updatePrice()">
+                                    <span>Extra Honey (+₹5)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="ginger" data-price="3" onchange="updatePrice()">
+                                    <span>Extra Ginger (+₹3)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="milk" data-price="5" onchange="updatePrice()">
+                                    <span>Extra Milk (+₹5)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="addons" value="lemon" data-price="3" onchange="updatePrice()">
+                                    <span>Fresh Lemon (+₹3)</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Delivery Options -->
+                        <fieldset class="form-group">
+                            <legend>Delivery Option</legend>
+
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="delivery" value="standard" checked onchange="updatePrice()">
+                                    <span>Standard Delivery - Free</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="delivery" value="express" onchange="updatePrice()">
+                                    <span>Express Delivery - +₹20</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Special Instructions -->
+                        <fieldset class="form-group">
+                            <legend>Special Instructions</legend>
+                            <textarea id="instructions" name="instructions" placeholder="Any special instructions? (Optional)" rows="4"></textarea>
+                        </fieldset>
+
+                        <!-- Order Summary -->
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-item">
+                                <span>Tea</span>
+                                <span id="summaryTea">Select a tea</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Quantity</span>
+                                <span id="summaryQuantity">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Add-ons</span>
+                                <span id="summaryAddons">₹0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Delivery</span>
+                                <span id="summaryDelivery">Free</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>Total Amount</span>
+                                <span id="totalPrice">₹0</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-large">Place Order</button>
+                        <p class="form-note">Estimated delivery time: 15-20 minutes</p>
+                    </form>
+                </div>
+
+                <!-- Order Info Sidebar -->
+                <div class="order-info">
+                    <div class="info-card">
+                        <h3>🚚 Fast Delivery</h3>
+                        <p>Get your favorite tea delivered in 15-20 minutes</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>💵 Easy Payment</h3>
+                        <p>Pay cash on delivery or use your preferred payment method</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🔥 Fresh & Hot</h3>
+                        <p>Every cup is freshly brewed just for you</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>⭐ Quality Guarantee</h3>
+                        <p>If you're not satisfied, we'll remake your order</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CHAI GALI</h4>
+                <p>Your favorite tea stop for premium quality and great taste</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Tea Street, Chai Lane</p>
+                <p>📞 +91-XXXX-XXXX-XXXX</p>
+                <p>📧 info@chaigali.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">i</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CHAI GALI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
